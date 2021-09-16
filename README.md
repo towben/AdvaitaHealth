@@ -4,7 +4,7 @@ AdvaitaHealth
 
 用区块链可信任健康数据将商业从商品进化到服务，从服务到健康游戏竞赛，从健康游戏竞赛到共同参与数据收集的商业模式。在数据众包的基础上用人工智能与机器学习的方法探索适合人类的健康生活方式。
 
-![Image text](https://raw.githubusercontent.com/towben/AdvaitaHealth/main/framework.png)
+![Image text](https://raw.githubusercontent.com/towben/AdvaitaHealth/main/about%20us/image/framework.png)
 
 
 ## 环境依赖
