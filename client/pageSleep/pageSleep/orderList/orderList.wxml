@@ -1,0 +1,34 @@
+<MyHeader bind:back="back"  backIcon="{{true}}"></MyHeader>
+<!-- 授权登录框 -->
+<login wx:if="{{!userInfo}}"></login>
+<myLoading wx:if="{{loading}}"></myLoading>
+<scroll-view scroll-into-view="{{type}}" style="height: calc({{windowHeight}}px - {{statusBarHeight}}px - {{navHeight}}px);position:relative;"
+ scroll-y="true" class="scroll_h" bindscrolltolower="scrollMore">
+	<view class="no-more">暂无记录</view>
+	<!-- <text lines="1" class="info1">已购买</text>
+	<view class="section2">
+		<view class="block1">
+			<view class="layer1">
+				<view class="box1">
+					<view class="main1">
+						<image wx:if="true" src="https://i.2fei2.com/goods/logo/2021-09-30/10:58:39/615527df1c9f2.png" class="icon1"></image>
+						<image wx:else src="https://i.2fei2.com/goods/logo/2021-09-30/11:01:08/615528749598c.png" style="width: 36rpx;height: 36rpx;" class="icon1"></image>
+					</view>
+					<view class="main2">
+						<text lines="1" class="info2">调理喷雾+专家咨询</text>
+						<text lines="1" class="word2" wx:if="true">服务已关闭</text>
+						<text lines="1" class="word6" wx:else>服务进行中</text>
+					</view>
+					<text wx:if="true" lines="1" class="txt1">已完成</text>
+					<button wx:else bindtap="onClick" class="section6" bindtap="goDetail" data-url="/pageSleep/pageSleep/serviceTest/serviceTest">
+						<text lines="1" class="word9">查看合约</text>
+					</button>
+				</view>
+				<view class="box2"></view>
+				<text lines="1" decode="true" class="word3">购买日期：2021.8.9&nbsp;12:23</text>
+				<text lines="1" class="word4">付款金额：99元</text>
+			</view>
+			<text lines="1" decode="true" class="infoBox1">131元睡眠喷雾&nbsp;+&nbsp;问卷&nbsp;+&nbsp;专家咨询&nbsp;=&nbsp;特价99元<br /></text>
+		</view>
+	</view> -->
+</scroll-view>

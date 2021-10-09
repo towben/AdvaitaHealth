@@ -1,0 +1,105 @@
+<MyHeader bind:back="back" backIcon="{{true}}"></MyHeader>
+<!-- 授权登录框 -->
+<login wx:if="{{!userInfo}}"></login>
+<myLoading wx:if="{{loading}}"></myLoading>
+<scroll-view scroll-into-view="{{type}}" style="height: calc({{windowHeight}}px - {{statusBarHeight}}px - {{navHeight}}px);position:relative;"
+ scroll-y="true" class="scroll_h" bindscrolltolower="scrollMore">
+	<text lines="1" class="word1">睡眠改善约定项目</text>
+	<view class="outer2">
+		<text lines="1" class="word2">56</text>
+		<text lines="1" class="word3">+22</text>
+		<text lines="1" class="word4">78</text>
+	</view>
+	<view class="outer3">
+		<view class="wrap1">
+			<text lines="1" class="word5">约定之前</text>
+		</view>
+		<view class="wrap2">
+			<text lines="1" class="txt1">约定提高</text>
+		</view>
+		<view class="wrap3">
+			<text lines="1" class="info2">约定之后</text>
+		</view>
+	</view>
+	<view class="outer4">
+		<text lines="1" class="paragraph1">合约开始前检测的<br />睡眠平均分为</text>
+		<text lines="1" class="paragraph2">合约期间<br />提升的分数</text>
+		<text lines="1" class="paragraph3">合约约定项目<br />结束后的目标分</text>
+	</view>
+	<view class="outer5 content" style="height:{{true?'63rpx':'611rpx'}}">
+		<view class="section1">
+			<text lines="1" class="info3">方案细节</text>
+			<text lines="1" class="word6">收起</text>
+		</view>
+		<!-- <view class="text-detail" style="margin-top: 26rpx;">干预阶段（10天）</view>
+		<view class="text-detail">咨询，出具干预方案。</view>
+		<view class="text-detail">继续佩戴手表，观察干预效果。</view>
+		<view class="text-detail">动态调整干预方案。</view>
+		
+		<view class="text-detail" style="margin-top: 30rpx;">巩固阶段(10天）</view>
+		<view class="text-detail">执行干预方案。</view>
+		<view class="text-detail">10天内出具5次未病测评报告。</view>
+		<view class="text-detail">计算5次睡眠得分的平均分数。</view>
+		
+		<view class="text-detail" style="margin-top: 30rpx;">执行智能合约</view>
+		<view class="text-detail">对比巩固期和测试期的睡眠平均分数。</view>
+		<view class="text-detail">达到约定提高分数，支付费用给专家。</view>
+		<view class="text-detail">没有达到约定分数，退款给用户。</view> -->
+	</view>
+	<view class="outer6">
+		<text lines="1" class="info4">约定提高分数</text>
+		<view class="block1">
+			<text lines="1" class="txt2">22</text>
+		</view>
+	</view>
+	<view class="outer7">
+		<text lines="1" class="word7">约定分数单价（元）</text>
+		<view class="main1">
+			<text lines="1" class="word8">300</text>
+		</view>
+	</view>
+	<view class="outer8 content"></view>
+	<text lines="1" class="txt3 ">约定总价：6600元</text>
+	<view class="outer9">
+		<view class="section2">
+			<view class="section3">
+				<view class="group2">
+					<view class="group3"></view>
+					<text lines="1" class="paragraph4">我会按照方案<br />严格执行</text>
+				</view>
+				<view class="group4">
+					<view class="wrap4">
+						<text lines="1" class="txt4">张三丰</text>
+						<view class="mod1">
+							<text lines="1" class="info5">已约定</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="section4">
+			<view class="group5">
+				<view class="layer1">
+					<view class="wrap5"></view>
+					<view class="wrap6">
+						<view class="layer2">
+							<text lines="1" class="info6">专家</text>
+						</view>
+						<text lines="1" class="txt5">2021.8.9</text>
+					</view>
+				</view>
+				<view class="layer3">
+					<view class="mod2">
+						<text lines="1" class="word9">容华</text>
+						<view class="box1">
+							<text lines="1" class="info7">已约定</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="outer10">
+		<text lines="1" class="txt6">去支付</text>
+	</view>
+</scroll-view>
