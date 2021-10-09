@@ -67,7 +67,7 @@
 
 ## 实现路径
 
-![](https://github.com/towben/AdvaitaHealth/blob/main/about%20us/image/ah3.jpeg)
+![](https://github.com/towben/AdvaitaHealth/blob/main/about%20us/image/framework_en2.png)
 
 ## 智能可穿戴设备
 
