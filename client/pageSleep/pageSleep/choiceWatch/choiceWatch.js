@@ -27,6 +27,12 @@ Page({
 			url: '/pageSleep/pageSleep/choice/choice'
 		})
 	},
+	goChat(){
+		wx.previewImage({
+		   current: 'https://i.2fei2.com/goods/logo/2021-07-28/10:21:14/6100bf1a0aadc.png',
+		   urls: ['https://i.2fei2.com/goods/logo/2021-07-28/10:21:14/6100bf1a0aadc.png']
+		})
+	},
 	goConfirm() {
 		wx.navigateTo({
 			url: '/pageShop/pageShop/orderConfirm/orderConfirm?num=1&goods_id=2952&goods_attr_id=28042'

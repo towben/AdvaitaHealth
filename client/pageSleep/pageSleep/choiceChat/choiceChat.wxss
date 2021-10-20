@@ -79,7 +79,6 @@ page {
 }
 .mod5 {
   z-index: 3;
-  width: 592rpx;
   height: 139rpx;
   overflow-wrap: break-word;
   text-align: left;

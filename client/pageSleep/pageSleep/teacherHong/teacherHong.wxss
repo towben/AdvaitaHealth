@@ -17,7 +17,6 @@
 .bd1 {
   z-index: auto;
   width: 728rpx;
-  height: 893rpx;
   display: flex;
   flex-direction: column;
 }
@@ -31,7 +30,7 @@
 }
 .bd2 {
   z-index: 9;
-  width: 460rpx;
+  width: 728rpx;
   overflow-wrap: break-word;
   text-align: left;
   font-size: 0rpx;
@@ -46,6 +45,7 @@
   text-overflow: ellipsis;
 }
 .infoBox2 {
+	width: 750rpx;
   font-size: 29rpx;
   font-family: PingFangSC-Regular;
   color: rgba(0,0,0,1.000000);
@@ -285,19 +285,19 @@
 }
 .paragraph2 {
   z-index: 22;
-  position: absolute;
+ /* position: absolute;
   left: 22rpx;
-  top: 812rpx;
+  top: 812rpx; */
   width: 708rpx;
   height: 72rpx;
   display: block;
-  overflow-wrap: break-word;
+  /* overflow-wrap: break-word; */
   color: rgba(128,128,128,1);
   font-size: 25rpx;
   letter-spacing: -1rpx;
   font-family: PingFangSC-Regular;
   line-height: 36rpx;
   text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
 }

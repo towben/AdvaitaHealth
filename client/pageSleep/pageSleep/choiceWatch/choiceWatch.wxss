@@ -79,7 +79,6 @@ page {
 }
 .box2 {
   z-index: 3;
-  width: 574rpx;
   height: 100rpx;
   overflow-wrap: break-word;
   text-align: left;

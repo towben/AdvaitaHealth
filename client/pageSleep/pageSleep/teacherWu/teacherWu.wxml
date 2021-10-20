@@ -8,11 +8,7 @@
 			<view class="group1">
 				<view class="main2">
 					<view lines="1" class="paragraph1">授课老师</view>
-					<text lines="1" decode="true" class="infoBox1">吴奇伟老师&nbsp;35年资深冥想教师&nbsp;台北<br /></text>
-				</view>
-				<view class="main3">
-					<image src="../../images/lanhu_wuqiweilaoshijieshao/SketchPngf80e36c6e6d29e8118714225653f7180b20198076e70c0b55108e8ff2797e8ee.png"
-					 class="img1"></image>
+					<view lines="1" decode="true" class="infoBox1">吴奇伟老师 35年资深冥想教师 台北</view>
 				</view>
 			</view>
 			<view class="group2">
@@ -28,7 +24,9 @@
 				<text lines="1" class="word2">吴奇伟</text>
 			</view>
 			<text lines="1" class="word3">现任</text>
-			<text lines="1" class="paragraph2">·瑜珈教师证照班及断食营指导老师<br />·瑜伽呼吸暨身印教师证照班指导老师<br />·五大元素与心灵转化瑜伽师资班指导老师<br /><br /><br /></text>
+			<text lines="1" class="paragraph2">·瑜珈教师证照班及断食营指导老师</text>
+			<text lines="1" class="paragraph2">·瑜伽呼吸暨身印教师证照班指导老师</text>
+			<text lines="1" class="paragraph2">·五大元素与心灵转化瑜伽师资班指导老师</text>
 			<text lines="1" class="paragraph5">教学履历</text>
 			<text lines="1" class="infoBox2">教授整体瑜伽锻炼逾20年(1996年起)<br /></text>
 			<text lines="1" class="paragraph3">自1985年起研究中国传统易理数术、星象命理、五术、气功、<br />太极、导引、各式健身法、养生中医、自然疗法、同类疗法、<br />心理咨商、禅修静坐、灵修哲学与各式修持法，并于1995年起<br />从事身心灵整体瑜伽锻炼迄今。<br /><br /></text>

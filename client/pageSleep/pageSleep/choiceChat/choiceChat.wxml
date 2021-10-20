@@ -40,7 +40,7 @@
 			</view>
 			<view class="mod9">
 				<view class="main5">
-					<text lines="1" class="info1">3.专家根出方案</text>
+					<text lines="1" class="info1">3.专家提出方案</text>
 					<text lines="1" class="paragraph3"></text>
 					<text lines="1" class="infoBox4"></text>
 				</view>

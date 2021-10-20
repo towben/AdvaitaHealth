@@ -8,10 +8,7 @@
 	    <view class="mod1">
 	      <view class="bd2">
 	        <view lines="1" class="infoBox1">授课服务</view>
-	        <text lines="1" decode="true" class="infoBox2">洪容华老师&nbsp;35年资深冥想教师&nbsp;台北&nbsp;</text>
-	      </view>
-	      <view class="bd3">
-	        <image src="../../images/lanhu_ronghualaoshijieshao/SketchPngf80e36c6e6d29e8118714225653f7180b20198076e70c0b55108e8ff2797e8ee.png" class="img1"></image>
+	        <view lines="1" decode="true" class="infoBox2">洪容华老师 35年资深冥想教师 台北</view>
 	      </view>
 	    </view>
 	    <view class="mod2">
@@ -30,11 +27,12 @@
 	    <text lines="1" class="infoBox6">瑜伽呼吸暨身印教师认证<br/></text>
 	    <text lines="1" class="infoBox7">五大元素与心灵转化及瑜伽运动伤害结业<br/></text>
 	    <text lines="1" class="paragraph1">仁神术国际课程及专题课程结业<br/><br/></text>
-	    <text lines="1" decode="true" class="word2">SahajMarg&nbsp;Spirituality&nbsp;Founda&nbsp;tion-Spiritual&nbsp;Preceptor认证</text>
+		<text lines="1" decode="true" class="paragraph2" style="margin-top: 30rpx;">SahajMarg&nbsp;Spirituality&nbsp;Founda&nbsp;tion-Spiritual&nbsp;Preceptor认证</text>
+		<text lines="1" decode="true" class="paragraph2">Shanti&nbsp;Institute&nbsp;of&nbsp;Ayurveda-&nbsp;Ayurveda&nbsp;Lifestyle&nbsp;Program&nbsp;结业<br/><br/><br/></text>
 	  </view>
 	  <view class="bd4">
 	    <image src="../../images/lanhu_ronghualaoshijieshao/SketchPngb72e358ae95636ed1452c3328663c0d9aabc9ae0b848aec4c789c77b644e7d76.png" class="pic1"></image>
 	  </view>
-	  <text lines="1" decode="true" class="paragraph2">Shanti&nbsp;Institute&nbsp;of&nbsp;Ayurveda-&nbsp;Ayurveda&nbsp;Lifestyle&nbsp;Program&nbsp;结业<br/><br/><br/></text>
+	 
 	</view>
 </scroll-view>

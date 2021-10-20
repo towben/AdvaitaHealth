@@ -72,7 +72,7 @@
 	</view>
 	
 	<!-- 服务状态 -->
-	<view class="item-box num-info" wx:if="{{info.goods[0].goods_id == 2951 || info.goods[0].goods_id == 2952}}">
+	<view class="item-box num-info" wx:if="{{(info.goods[0].goods_id == 2951 || info.goods[0].goods_id == 2952) && info.state > 1 && info.state != 7 }}">
 		<view class="order-info-title">服务状态</view>
 		<view class="order-info-num">{{info.tips}}</view>
 		<view class="order-info-btn" bindtap="goTest">进入</view>

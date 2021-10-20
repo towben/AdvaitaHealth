@@ -40,7 +40,7 @@
 }
 .main2 {
   z-index: 18;
-  width: 460rpx;
+  width: 728rpx;
   overflow-wrap: break-word;
   text-align: left;
   font-size: 0rpx;
@@ -55,6 +55,7 @@
   text-overflow: ellipsis;
 }
 .infoBox1 {
+	width: 750rpx;
   font-size: 29rpx;
   font-family: PingFangSC-Regular;
   color: rgba(0,0,0,1.000000);
@@ -183,8 +184,6 @@
 }
 .paragraph2 {
   z-index: 6;
-  width: 475rpx;
-  height: 111rpx;
   display: block;
   overflow-wrap: break-word;
   color: rgba(128,128,128,1);
@@ -295,7 +294,6 @@
 }
 .paragraph5 {
   z-index: 4;
-  width: 101rpx;
   height: 72rpx;
   display: block;
   overflow-wrap: break-word;
@@ -311,7 +309,6 @@
 }
 .infoBox4 {
   z-index: 5;
-  width: 101rpx;
   height: 72rpx;
   display: block;
   overflow-wrap: break-word;
