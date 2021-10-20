@@ -73,7 +73,7 @@ Component({
     index: function() {
       // this.triggerEvent("home", {});
 	  wx.reLaunch({
-	  	url: '/pages/home/home'
+	  	url: '/pageSleep/pageSleep/choice/choice'
 	  })
     },
 	home: function() {

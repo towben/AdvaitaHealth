@@ -253,12 +253,18 @@ Page({
 					});
 					setTimeout(()=>{
 						wx.reLaunch({
-							url: '/pageShop/pageShop/car/car'
+							url: '/pageSleep/pageSleep/choice/choice'
 						})
 					},2000)
 					
 				}
 			}
+		})
+	},
+	goChat(){
+		wx.previewImage({
+		   current: 'https://i.2fei2.com/goods/logo/2021-07-28/10:21:14/6100bf1a0aadc.png',
+		   urls: ['https://i.2fei2.com/goods/logo/2021-07-28/10:21:14/6100bf1a0aadc.png']
 		})
 	},
 	goPay() {
@@ -343,9 +349,10 @@ Page({
 													duration: 2000
 												});
 												setTimeout(function() {
-													wx.reLaunch({
-														url: '/pageShop/pageShop/order/order'
-													});
+													// wx.reLaunch({
+													// 	url: '/pageShop/pageShop/order/order'
+													// });
+													that.goChat()
 												}, 1000);
 											} else {
 												wx.showToast({
@@ -368,9 +375,10 @@ Page({
 												isFirst: true
 											})
 											setTimeout(function() {
-												wx.reLaunch({
-													url: '/pageShop/pageShop/orderDetail/orderDetail?orders_id=' + id
-												});
+												// wx.reLaunch({
+												// 	url: '/pageShop/pageShop/orderDetail/orderDetail?orders_id=' + id
+												// });
+												that.goChat()
 											}, 1000);
 										},
 										complete: function(res) {
@@ -446,9 +454,10 @@ Page({
 					duration: 2000
 				});
 				setTimeout(function() {
-					wx.reLaunch({
-						url: '/pageShop/pageShop/order/order'
-					});
+					// wx.reLaunch({
+					// 	url: '/pageShop/pageShop/order/order'
+					// });
+					that.goChat()
 				}, 1000);
 			},
 			fail: function(res) {
@@ -465,6 +474,7 @@ Page({
 					wx.reLaunch({
 						url: '/pageShop/pageShop/orderDetail/orderDetail?orders_id=' + id
 					});
+					// that.goChat()
 				}, 1000);
 			},
 			complete: function(res) {

@@ -17,7 +17,11 @@
 			</view>
 			<view slot="content">
 				<view class="hidden-text" style="margin-top: 50rpx;max-width: 400rpx;font-size: 28rpx;font-weight: bold;">{{userInfo.Wechat_xcxSetUser.nickname}}</view>
-				<!-- <view class="wechat-box" bindtap="goChat"><view class="wechat-icon iconfont iconweixinhaoyou1"></view>联系客服</view> -->
+				<!-- <view class="wechat-box" bindtap="goChat">更新头像</view> -->
+				
+				
+				<button class="wechat-box" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"><view class="wechat-icon iconfont iconweixinhaoyou1"></view> 更新头像昵称 </button>
+				<button class="wechat-box" wx:else open-type="getUserInfo" bindgetuserinfo="confirm"><view class="wechat-icon iconfont iconweixinhaoyou1"></view> 更新头像昵称 </button>
 			</view>
 		</myUserInfo>
 	</view>
@@ -38,6 +42,18 @@
 	bindtap="goUrl" data-url="/pageSleep/pageSleep/orderList/orderList">
 		<myUserInfo height="100" contentLeft="120" borderLeft="{{0}}">
 			<view slot="avatar">
+				<view class="iconfont2 icongaiicon-" style="height: 72rpx; display:inline-block;font-size:50rpx;color: #223370;position: absolute;left:44rpx;top: 0;bottom: 0;margin: auto;"></view>
+			</view>
+			<view slot="content">
+				<view class="hidden-text" style="margin-top: 34rpx;color: #333;max-width: 400rpx;font-size: 28rpx;font-weight: bold;">我的合约</view>
+			</view>
+		</myUserInfo>
+	</view>
+	
+	<view class="user-item"
+	bindtap="goUrl" data-url="/pageShop/pageShop/order/order">
+		<myUserInfo height="100" contentLeft="120" borderLeft="{{0}}">
+			<view slot="avatar">
 				<view class="iconfont2 icon6" style="height: 72rpx; display:inline-block;font-size:50rpx;color: #223370;position: absolute;left:44rpx;top: 0;bottom: 0;margin: auto;"></view>
 			</view>
 			<view slot="content">
@@ -45,7 +61,6 @@
 			</view>
 		</myUserInfo>
 	</view>
-	
 	<view class="user-item"
 	bindtap="goChat">
 		<myUserInfo height="100" contentLeft="120" borderLeft="{{0}}">

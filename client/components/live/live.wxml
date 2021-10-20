@@ -5,7 +5,7 @@
 				全部直播
 			</view>
 		</view>
-		<view class="share-night">每日晚上 21:00 一起静坐</view>
+		<view class="share-night">每日晚上 22:00 一起静坐</view>
 		<view class="share-box" bindtap="goUrl" data-url="/pageHappy/pageHappy/shareNight/shareNight">
 			<image class="share-img" src="https://i.2fei2.com/shop/logo/2021-01-28/09:43:15/601216b32ff5f.png" mode="aspectFill"></image>
 			<view class="share-btn">前去共修</view>

@@ -66,7 +66,6 @@ page {
   width: 185rpx;
   height: 112rpx;
   overflow: hidden;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGYAAAA+CAYAAADZAm74AAAAAXNSR0IArs4c6QAAAIZJREFUeAHt0DEBAAAAwqD1T20JT4hAYcCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYOA1MGMOAAFoCEnvAAAAAElFTkSuQmCC) 100% no-repeat;
   display: flex;
   flex-direction: column;
 }
@@ -371,16 +370,18 @@ page {
 }
 .word5 {
   z-index: 27;
-  width: 154rpx;
-  height: 40rpx;
+  width: 707rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
   display: block;
   overflow-wrap: break-word;
-  color: rgba(70,98,255,1);
+  color: #fff;
+  background-color: rgba(70,98,255,1);
+  border-radius: 42rpx;
   font-size: 29rpx;
   font-family: PingFang-SC-Heavy;
   white-space: nowrap;
-  line-height: 40rpx;
-  text-align: left;
   align-self: flex-start;
   margin-top: 16rpx;
 }
@@ -392,7 +393,6 @@ page {
   width: 750rpx;
   height: 34rpx;
   overflow: hidden;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZ4AAAATCAYAAACgJWu9AAAAAXNSR0IArs4c6QAAAKFJREFUeAHt0AENAAAAwqD3T+1mDohAYcCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYOADA3r7AAEI5uIqAAAAAElFTkSuQmCC) 100% no-repeat;
   display: flex;
   flex-direction: column;
 }
@@ -679,7 +679,6 @@ page {
   width: 750rpx;
   height: 34rpx;
   overflow: hidden;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZ4AAAATCAYAAACgJWu9AAAAAXNSR0IArs4c6QAAAKFJREFUeAHt0AENAAAAwqD3T+1mDohAYcCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYOADA3r7AAEI5uIqAAAAAElFTkSuQmCC) 100% no-repeat;
   display: flex;
   flex-direction: column;
 }

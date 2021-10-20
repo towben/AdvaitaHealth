@@ -1,3 +1,15 @@
+// 封装获取节点选择器信息
+function getSelectQurey(queryStr){
+	return new Promise(resolve => {
+		setTimeout(() => {
+			var query = wx.createSelectorQuery().select(queryStr);
+			query.boundingClientRect((res) => {
+				resolve(res)
+			}).exec();
+		}, 30)
+	})
+}
+
 // 转义富文本
 function getArticle(str){
 	function escape2Html(content) {
@@ -20,6 +32,31 @@ function getArticle(str){
 	let a = decodeURIComponent(str)
 	return escape2Html(a);
 }
+
+// 转义富文本-断食
+function getArticleChange(str){
+	function escape2Html(content) {
+		let arrEntities = {
+			lt: '<',
+			gt: '>',
+			nbsp: ' ',
+			amp: '&',
+			quot: '"'
+		};
+		return content
+			.replace(/&(lt|gt|nbsp|amp|quot);/gi, function(all, t) {
+				return arrEntities[t];
+			})
+			.replace(/\+/g, " ")
+			.replace(/<section/g, '<div')
+			.replace(/<img[^>]*src=[\'|\"]http(.*?)(jpg|png)(.*?)>/gi,
+				"<img src='http$1$2' style='max-width:100%;height:auto;display:block;margin:0 auto;'>");
+	}
+	str = str.replace(/%/g, '%25');
+	let a = decodeURIComponent(str)
+	return escape2Html(a);
+}
+
 // 转义富文本-去掉标签
 function getArticleNoneHtml(str){
 	function escape2Html(content) {
@@ -360,7 +397,14 @@ function formatSecondString(time) {
 	let second = parseInt(time - hour * 60 * 60 - minute * 60)
 	return [hour, minute, second].map(formatNumber)
 }
-
+/**
+ * 将时间戳转为x分钟x秒
+ */
+function formatOnlySecondString(time) {
+	let minute = parseInt(time / 60)
+	let second = parseInt(time - minute * 60)
+	return [minute, second].map(formatNumber)
+}
 /**
  * 将时间戳转为x小时x分钟
  */
@@ -368,6 +412,16 @@ function formatTimeString(time) {
 	let hour = Math.floor(time / 60 / 60)
 	let minute = parseInt((time - hour * 60 * 60) / 60)
 	return [hour, minute]
+}
+/**
+ * 将时间戳转为x天x小时x分钟
+ */
+function formatDayString(time) {
+	
+	let day = Math.floor(time / 60 / 60 / 24)
+	let hour = Math.floor((time - day * 60 * 60 * 24)/ 60 / 60)
+	let minute = parseInt((time - day * 60 * 60 * 24 - hour * 60 * 60) / 60)
+	return [day, hour, minute]
 }
 /**
  * 将时间戳转为日期格式
@@ -633,16 +687,20 @@ function ajax(obj, call_num, num) {
 				//   }
 				//   ajax(obj,call_num,num)
 				// }
-				obj.error(JSON.stringify(obj.data));
-				console.error("Mes : " + "_状态码: " + data.statusCode + ' ERR: Args : ' + JSON.stringify(obj.data) + " Url : " +
-					obj.url + " Time : " + (endtime - starttime) / 1000 + "s");
+				if (typeof obj?.error == "function") {
+					obj?.error(JSON.stringify(obj?.data))
+				}
+				console.error("Mes : " + "_状态码: " + data.statusCode + ' ERR: Args : ' + JSON.stringify(obj?.data) + " Url : " +
+					obj?.url + " Time : " + (endtime - starttime) / 1000 + "s");
 			}
 		},
 		error: function($data) {
 			endtime = new Date().getTime();
 			console.error('ERR: Args : ' + JSON.stringify(obj.data) + " Url : " + obj.url + " Time : " + (endtime - starttime) /
 				1000 + "s");
-			obj.error($data);
+			if (typeof obj?.error == "function") {
+				obj?.error($data);
+			}
 			wx.redirectTo({
 				url: '../linkErr/linkErr?text=服务器开了个小差'
 			})
@@ -650,8 +708,8 @@ function ajax(obj, call_num, num) {
 		complete: function($data) {
 			if ($data.errMsg.indexOf("request:fail") >-1) {
 				var info = { 'result': 'fail', 'error_info': config('error_text')[0] };
-				if (typeof obj.error == "function") {
-					obj.error(info);
+				if (typeof obj?.error == "function") {
+					obj?.error(info);
 				} else {
 					// var page = getCurrentPages();
 					// page[0].error(info);
@@ -895,8 +953,10 @@ function stringToInt(str) {
 
 
 module.exports = {
+	getSelectQurey,
 	getArticleNoneHtml,
 	getArticle,
+	getArticleChange,
 	getUserProfileSave,
 	getSettingSave,
 	getWxImageInfo,
@@ -907,8 +967,10 @@ module.exports = {
 	debounce,
 	throttle,
 	getEchartData,
+	formatOnlySecondString,
 	formatSecondString,
 	formatTimeString: formatTimeString,
+	formatDayString,
 	formatTime: formatTime,
 	formatTimes: formatTimes,
 	formatOnlyDates: formatOnlyDates,

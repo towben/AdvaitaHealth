@@ -12,6 +12,11 @@ page {
 .tab-border{
 	border-top: 20rpx solid #F8F8F8;
 }
+.user-poster{
+	width: 670rpx;
+	height: 128rpx;
+	margin-bottom: 30rpx;
+}
 /* 标题 */
 .box-bar {
 	width: 750rpx;

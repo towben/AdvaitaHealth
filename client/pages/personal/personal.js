@@ -22,7 +22,8 @@ Page({
 		showReport: false,
 		showSport:false,
 		isLoading:false,
-		step_num:0
+		step_num:0,
+		canIUseGetUserProfile: false
 	},
 
 	onLoad: function(options) {
@@ -31,9 +32,15 @@ Page({
 			withShareTicket: true,
 			menus: ['shareAppMessage', 'shareTimeline']
 		});
+		if (wx.getUserProfile) {
+			that.setData({
+				canIUseGetUserProfile: true
+			})
+		}
 		//公用设置参数
 		app.commonInit(options, this, function(tokenInfo) {
 			that.getData();
+			
 		})
 	},
 	goChat(){
@@ -41,6 +48,91 @@ Page({
 		   current: 'https://i.2fei2.com/goods/logo/2021-07-28/10:21:14/6100bf1a0aadc.png',
 		   urls: ['https://i.2fei2.com/goods/logo/2021-07-28/10:21:14/6100bf1a0aadc.png']
 		})
+	},
+	confirm(res) {
+		app.clickGetUserInfo(res, this, function(tokenInfo) {
+		  //重新载入
+		  let pages = getCurrentPages();
+		  if (pages.length != 0) {
+		    //刷新当前页面的数据
+		    pages[pages.length - 1].onLoad(wx.getStorageSync("_GET"));
+		  }
+		});
+	},
+	async getUserProfile(e) {
+		let that = this
+		try {
+			let res = await util.getUserProfileSave()
+			console.log('getUserProfileSave', res)
+			let profileData = res.userInfo
+			that.setData({
+				loading: true
+			})
+			util.ajax({
+				url: util.config('baseApiUrl') + 'Api/Wechat/updateWechatUserInfo',
+				data: {
+					wechat_name: profileData.nickName,
+					wechat_img: profileData.avatarUrl,
+					wechat_province: profileData.province,
+					wechat_city: profileData.city,
+					wechat_county: profileData.country,
+					wechat_union_id: wx.getStorageSync('union_id') || '',
+					wechat_open_id: wx.getStorageSync('wecha_id') || '',
+					shop_id: wx.getStorageSync('watch_shop_id'),
+					wechat_sex: profileData.gender
+				},
+				method: 'GET',
+				header: {
+					'Accept': 'application/json'
+				},
+				success: function(ress) {
+					if (ress.error == 0 || ress.error == 1) {
+						wx.removeStorageSync('tokenInfo');
+						let pages = getCurrentPages();
+						if (pages.length != 0) {
+							//刷新当前页面的数据
+							// that.triggerEvent("cancel");
+							pages[pages.length - 1].onLoad(wx.getStorageSync("_GET"));
+						}
+					} else {
+						that.setData({
+							loading: false,
+						})
+						setTimeout(() => {
+							wx.showToast({
+								title: ress.msg,
+								icon: 'none',
+								duration: 2000
+							});
+						}, 0)
+					}
+				},
+				error() {
+					that.setData({
+						loading: false,
+						canIUseGetUserProfile: false
+					})
+					let pages = getCurrentPages();
+					if (pages.length != 0) {
+						//刷新当前页面的数据
+						pages[pages.length - 1].onLoad(wx.getStorageSync("_GET"));
+					}
+					setTimeout(() => {
+						wx.showToast({
+							title: '获取失败，请重试',
+							icon: 'none',
+							duration: 2000
+						});
+					}, 0)
+				}
+			})
+		} catch (e) {
+			wx.showToast({
+				title: '获取失败',
+				icon: 'none',
+				duration: 2000
+			});
+		}
 	},
 	hideReport() {
 		this.setData({

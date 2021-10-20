@@ -9,7 +9,9 @@ Page({
 		page_no: 1,
 		page_num: 10,
 		listMore: false,
-		list: []
+		list: [],
+		
+		
 	},
 	onLoad: function(options) {
 		var that = this
@@ -21,11 +23,6 @@ Page({
 			// that.getList()
 		}); //end 公用设置参数
 	},
-	back(e) {
-		wx[e.detail]({
-			url: '/pages/shop/shop'
-		})
-	},
 	goUrl(e) {
 		wx.navigateTo({
 			url: e.target.dataset.url || e.currentTarget.dataset.url
@@ -36,14 +33,14 @@ Page({
 	},
 	// 分享接口
 	onShareAppMessage: function() {
-		var data = app.shareInit('pageShop', 'moreGoods/moreGoods');
-		data.share_true_url = data.share_true_url.replace('pages', 'pageShop');
+		var data = app.shareInit('pageSleep', 'choice/choice');
+		data.share_true_url = data.share_true_url.replace('pages', 'pageSleep');
 		console.log('分享数据：');
-		console.log(data.share_true_url + '&type=' + this.data.type);
+		console.log(data.share_true_url);
 		return {
 			title: config.config().title || '',
 			// imageUrl:'http://i.2fei2.com/5dc2a4e019549.png?imageView/1/w/500/h/400/interlace/1/q/100',
-			path: data.share_true_url + '&type=' + this.data.type,
+			path: data.share_true_url,
 			success: function(res) {
 				//添加分享记录
 				util.ajax({

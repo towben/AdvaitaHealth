@@ -257,11 +257,24 @@ Page({
 					if(ress.data.state == 1){
 						that.getCount()
 					}
+					let item = ress.data
+					let id = item.goods[0].goods_id
+					if(id == 2951){
+						item.tips = item.confirm_state == 1?'服务已关闭':'服务进行中'
+					}else if(id == 2952){
+						if(item.goods[0].is_need_wait_fix_avg_score == 1){
+							item.tips = '准备阶段，佩戴手表并出具5次报告'
+						}else if(item.goods[0].is_need_wait_fix_avg_score == 0){
+							item.tips = '请联系医生出具干预方案'
+						}
+					}
 					that.setData({
-						info: ress.data,
-						add_time:util.formatTime(new Date(ress.data.add_time*1000)),
-						hasBtn: ress.data.state == 1 ||ress.data.state == 2
+						info: item,
+						add_time:util.formatTime(new Date(item.add_time*1000)),
+						hasBtn: item.state == 1 ||item.state == 2
 					})
+					
+					
 				}else if(ress.error == -1){
 					console.log('登录失效')
 				}else{
@@ -276,6 +289,31 @@ Page({
 				}
 			}
 		})
+	},
+	goChat(){
+		wx.previewImage({
+		   current: 'https://i.2fei2.com/goods/logo/2021-07-28/10:21:14/6100bf1a0aadc.png',
+		   urls: ['https://i.2fei2.com/goods/logo/2021-07-28/10:21:14/6100bf1a0aadc.png']
+		})
+	},
+	goTest(){
+		let data = this.data.info.goods[0]
+		if(data.goods_id == 2951){
+			wx.navigateTo({
+				url: '/pageSleep/pageSleep/serviceTest/serviceTest?chuangtong_state='+data.chuangtong_state+'&xiandai_state='+data.xiandai_state+'&orders_id='+this.data.info.orders_id
+			})
+		}else if(data.goods_id == 2952){
+			if(data.is_need_wait_fix_avg_score == 1){
+				// item.tips = '准备阶段，佩戴手表并出具5次报告'
+				wx.navigateTo({
+					url: '/pages/index/index'
+				})
+			}else if(data.is_need_wait_fix_avg_score == 0){
+				// item.tips = '请联系医生出具干预方案'
+				this.goChat()
+			}
+		}
+		
 	},
 	onShow: function() {
 		wx.getSystemInfo({

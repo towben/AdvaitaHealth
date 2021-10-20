@@ -231,6 +231,7 @@
 		<view class="scissors-bg" style="margin: 60rpx 0 57rpx;">
 			<image class="scissors" src="https://i.2fei2.com/shop/logo/2020-08-10/18:01:42/5f311b0684f15.png" mode="widthFix"></image>
 		</view>
+		<image class="user-poster" bindtap="goUrl" data-url="/pageWatch/pageWatch/onceLog/onceLog?example=1" src="https://i.2fei2.com/shop/logo/2020-10-30/17:11:15/5f9bd8b3407cb.png" mode="widthFix"></image>
 		<view class="equipment-example" bindtap="goUrl" data-url="/pages/home/news?type=3">
 			<image class="example-bg" src="https://i.2fei2.com/shop/logo/2020-08-11/10:25:01/5f32017de8cc9.png" mode="widthFix"></image>
 			<view class="example-text">报告案例<text class="equipment-back iconfont iconjiantouyou"></text></view>

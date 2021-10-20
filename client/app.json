@@ -48,7 +48,9 @@
 			"pageShop/workDetail/workDetail",
 			"pageShop/activity/activity",
 			"pageShop/moreGoods/moreGoods",
-			"pageShop/agent/agent"
+			"pageShop/agent/agent",
+			"pageShop/meditation/meditation",
+			"pageShop/rankList/rankList"
 			
 		]
 	},{
@@ -71,7 +73,9 @@
 			"pageSleep/orderList/orderList",
 			"pageSleep/serviceTest/serviceTest",
 			"pageSleep/serviceWatch/serviceWatch",
-			"pageSleep/serviceWatchDoc/serviceWatchDoc"
+			"pageSleep/serviceWatchDoc/serviceWatchDoc",
+			"pageSleep/teacherHong/teacherHong",
+			"pageSleep/teacherWu/teacherWu"
 		]
 	}],
 	"preloadRule": {

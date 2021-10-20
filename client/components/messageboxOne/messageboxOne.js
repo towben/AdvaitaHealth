@@ -84,7 +84,7 @@ Component({
 						if (ress.error == 0) {
 							let pages = getCurrentPages();
 							if (pages.length != 0) {
-								//刷新当前页面的数据
+								// 刷新当前页面的数据
 								// that.triggerEvent("cancel");
 								pages[pages.length - 1].onLoad(wx.getStorageSync("_GET"));
 							}

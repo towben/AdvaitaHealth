@@ -66,7 +66,6 @@ page {
   width: 185rpx;
   height: 112rpx;
   overflow: hidden;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGYAAAA+CAYAAADZAm74AAAAAXNSR0IArs4c6QAAAIZJREFUeAHt0DEBAAAAwqD1T20JT4hAYcCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYOA1MGMOAAFoCEnvAAAAAElFTkSuQmCC) 100% no-repeat;
   display: flex;
   flex-direction: column;
 }
@@ -152,14 +151,14 @@ page {
 .info2 {
   z-index: 10;
   width: 250rpx;
-  height: 40rpx;
+  height: 72rpx;
   display: block;
   overflow-wrap: break-word;
   color: rgba(0,0,0,1);
   font-size: 29rpx;
   font-family: PingFang-SC-Heavy;
   white-space: nowrap;
-  line-height: 40rpx;
+  line-height: 72rpx;
   text-align: left;
 }
 .txt1 {
@@ -390,19 +389,7 @@ page {
   display: flex;
   flex-direction: column;
 }
-.word5 {
-  z-index: 39;
-  width: 236rpx;
-  height: 33rpx;
-  display: block;
-  overflow-wrap: break-word;
-  color: rgba(84,84,84,1);
-  font-size: 25rpx;
-  font-family: PingFangSC-Regular;
-  white-space: nowrap;
-  line-height: 25rpx;
-  text-align: left;
-}
+
 .layer3 {
   z-index: 26;
   height: 49rpx;
@@ -700,7 +687,6 @@ page {
   width: 750rpx;
   height: 34rpx;
   overflow: hidden;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZ4AAAATCAYAAACgJWu9AAAAAXNSR0IArs4c6QAAAKFJREFUeAHt0AENAAAAwqD3T+1mDohAYcCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYOADA3r7AAEI5uIqAAAAAElFTkSuQmCC) 100% no-repeat;
   display: flex;
   flex-direction: column;
 }
@@ -716,17 +702,6 @@ page {
 
 
 
-
-.bd2 {
-  z-index: 3;
-  width: 592rpx;
-  height: 139rpx;
-  overflow-wrap: break-word;
-  text-align: left;
-  align-self: flex-start;
-  margin-top: 25rpx;
-  font-size: 0rpx;
-}
 .infoBox11 {
   font-size: 43rpx;
   font-family: PingFang-SC-Heavy;
@@ -953,7 +928,6 @@ page {
   width: 750rpx;
   height: 34rpx;
   overflow: hidden;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZ4AAAATCAYAAACgJWu9AAAAAXNSR0IArs4c6QAAAKFJREFUeAHt0AENAAAAwqD3T+1mDohAYcCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYOADA3r7AAEI5uIqAAAAAElFTkSuQmCC) 100% no-repeat;
   display: flex;
   flex-direction: column;
 }
@@ -964,4 +938,37 @@ page {
   top: 0rpx;
   width: 750rpx;
   height: 34rpx;
+}
+
+.paragraph5 {
+  z-index: 8;
+  width: 621rpx;
+  height: 43rpx;
+  display: block;
+  overflow-wrap: break-word;
+  color: rgba(0,0,0,1);
+  font-size: 29rpx;
+  font-family: PingFangSC-Regular;
+  white-space: nowrap;
+  line-height: 43rpx;
+  text-align: left;
+  align-self: flex-start;
+  margin-top: 33rpx;
+}
+.word5 {
+  z-index: 27;
+  width: 707rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  display: block;
+  overflow-wrap: break-word;
+  color: #fff;
+  background-color: rgba(70,98,255,1);
+  border-radius: 42rpx;
+  font-size: 29rpx;
+  font-family: PingFang-SC-Heavy;
+  white-space: nowrap;
+  align-self: flex-start;
+  margin-top: 16rpx;
 }

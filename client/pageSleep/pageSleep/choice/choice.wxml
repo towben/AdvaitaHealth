@@ -46,9 +46,11 @@
 		<view class="mod7">
 			<view class="section3-0">
 				<view class="mod8-0">
-					<view class="outer2-0"></view>
+					<view class="outer2-0">
+						<image src="https://i.2fei2.com/goods/logo/2021-10-14/13:43:34/6167c38655596.jpg" class="outer2-0"></image>
+					</view>
 					<text lines="1" class="word3-0">睡眠大师</text>
-					<view class="outer3-0">
+					<view class="outer3-0" bindtap="goUrl" data-url="/pageSleep/pageSleep/teacherHong/teacherHong">
 						<text lines="1" class="word4-0">了解更多</text>
 					</view>
 				</view>
@@ -56,9 +58,11 @@
 			</view>
 			<view class="section3-1">
 				<view class="mod8-1">
-					<view class="outer2-1"></view>
+					<view class="outer2-1">
+						<image src="https://i.2fei2.com/goods/logo/2021-10-14/14:11:10/6167c9fe79852.png" class="outer2-1"></image>
+					</view>
 					<text lines="1" class="word3-1">睡眠专家</text>
-					<view class="outer3-1">
+					<view class="outer3-1" bindtap="goUrl" data-url="/pageSleep/pageSleep/teacherWu/teacherWu">
 						<text lines="1" class="word4-1">了解更多</text>
 					</view>
 				</view>

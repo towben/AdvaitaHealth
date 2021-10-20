@@ -153,6 +153,21 @@ page {
 	margin-bottom: 27rpx;
 	position: relative;
 }
+.order-info-btn{
+	width: 188rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	text-align: center;
+	color: #fff;
+	font-size: 26rpx;
+	background: linear-gradient(180deg, #56BBFF 0%, #2B86FF 100%);
+	border-radius: 30rpx;
+	position: absolute;
+	right: 30rpx;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+}
 .order-copy{
 	padding: 30rpx;
 	color: #1966CA;

@@ -53,7 +53,7 @@
 				</view>
 			</view>
 			<text lines="1" class="paragraph5">如果您对睡眠服务还有不明白的地方，您可以</text>
-			<text lines="1" decode="true" class="word5">咨询客服&gt;&nbsp;</text>
+			<text lines="1" decode="true" class="word5" bindtap="goChat">咨询客服&gt;&nbsp;</text>
 		</block>
 
 		<block wx:else>

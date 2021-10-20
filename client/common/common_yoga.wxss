@@ -58,7 +58,6 @@ text{
     font-size: 40px;
 }
 .bg {
-    background: url('https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqB5ibWEBNhv6Eib3y7pAy4ddwicusxbB4jrrCmBF5FlBVOt2bXj1S42Xc15Vsrqpo7BT0L1XKnwPjyw/0') no-repeat;
     width:100%;
     height:100%;
     text-align: center;

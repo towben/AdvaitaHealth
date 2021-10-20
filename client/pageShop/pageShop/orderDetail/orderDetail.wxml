@@ -70,6 +70,13 @@
 		<view class="order-info-num">创建时间：{{add_time}}</view>
 		<view class="order-copy" bindtap="goCopy" data-num="{{info.orders_num}}">复制</view>
 	</view>
+	
+	<!-- 服务状态 -->
+	<view class="item-box num-info" wx:if="{{info.goods[0].goods_id == 2951 || info.goods[0].goods_id == 2952}}">
+		<view class="order-info-title">服务状态</view>
+		<view class="order-info-num">{{info.tips}}</view>
+		<view class="order-info-btn" bindtap="goTest">进入</view>
+	</view>
 
 	<!-- 物流信息 -->
 	<block wx:if="{{info.state == 2 ||info.state == 6}}">

@@ -17,12 +17,10 @@ Page({
 	},
 	back(e) {
 		wx[e.detail]({
-			url: '/pages/home/home'
+			url: '/pageSleep/pageSleep/choice/choice'
 		})
 	},
-	
 	onShow: function() {
-		
 	},
 	// 分享接口
 	onShareAppMessage: function() {
